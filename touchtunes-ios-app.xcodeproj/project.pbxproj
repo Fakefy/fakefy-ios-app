@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67923F09267536010056FCC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67923F08267536010056FCC8 /* AppDelegate.swift */; };
+		67923F0B267536010056FCC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67923F0A267536010056FCC8 /* SceneDelegate.swift */; };
+		67923F0D267536010056FCC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67923F0C267536010056FCC8 /* ViewController.swift */; };
+		67923F10267536010056FCC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67923F0E267536010056FCC8 /* Main.storyboard */; };
+		67923F12267536050056FCC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67923F11267536050056FCC8 /* Assets.xcassets */; };
+		67923F15267536050056FCC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67923F13267536050056FCC8 /* LaunchScreen.storyboard */; };
+		67923F20267536060056FCC8 /* touchtunes_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67923F1F267536060056FCC8 /* touchtunes_ios_appTests.swift */; };
+		67923F2B267536060056FCC8 /* touchtunes_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67923F2A267536060056FCC8 /* touchtunes_ios_appUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67923F1C267536060056FCC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67923EFD267536010056FCC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67923F04267536010056FCC8;
+			remoteInfo = "touchtunes-ios-app";
+		};
+		67923F27267536060056FCC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67923EFD267536010056FCC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67923F04267536010056FCC8;
+			remoteInfo = "touchtunes-ios-app";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67923F05267536010056FCC8 /* touchtunes-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "touchtunes-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67923F08267536010056FCC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		67923F0A267536010056FCC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		67923F0C267536010056FCC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		67923F0F267536010056FCC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67923F11267536050056FCC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67923F14267536050056FCC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67923F16267536050056FCC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67923F1B267536060056FCC8 /* touchtunes-ios-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "touchtunes-ios-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67923F1F267536060056FCC8 /* touchtunes_ios_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touchtunes_ios_appTests.swift; sourceTree = "<group>"; };
+		67923F21267536060056FCC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67923F26267536060056FCC8 /* touchtunes-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "touchtunes-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67923F2A267536060056FCC8 /* touchtunes_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touchtunes_ios_appUITests.swift; sourceTree = "<group>"; };
+		67923F2C267536060056FCC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67923F02267536010056FCC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67923F18267536060056FCC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67923F23267536060056FCC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67923EFC267536010056FCC8 = {
+			isa = PBXGroup;
+			children = (
+				67923F07267536010056FCC8 /* touchtunes-ios-app */,
+				67923F1E267536060056FCC8 /* touchtunes-ios-appTests */,
+				67923F29267536060056FCC8 /* touchtunes-ios-appUITests */,
+				67923F06267536010056FCC8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67923F06267536010056FCC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67923F05267536010056FCC8 /* touchtunes-ios-app.app */,
+				67923F1B267536060056FCC8 /* touchtunes-ios-appTests.xctest */,
+				67923F26267536060056FCC8 /* touchtunes-ios-appUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67923F07267536010056FCC8 /* touchtunes-ios-app */ = {
+			isa = PBXGroup;
+			children = (
+				67923F08267536010056FCC8 /* AppDelegate.swift */,
+				67923F0A267536010056FCC8 /* SceneDelegate.swift */,
+				67923F0C267536010056FCC8 /* ViewController.swift */,
+				67923F0E267536010056FCC8 /* Main.storyboard */,
+				67923F11267536050056FCC8 /* Assets.xcassets */,
+				67923F13267536050056FCC8 /* LaunchScreen.storyboard */,
+				67923F16267536050056FCC8 /* Info.plist */,
+			);
+			path = "touchtunes-ios-app";
+			sourceTree = "<group>";
+		};
+		67923F1E267536060056FCC8 /* touchtunes-ios-appTests */ = {
+			isa = PBXGroup;
+			children = (
+				67923F1F267536060056FCC8 /* touchtunes_ios_appTests.swift */,
+				67923F21267536060056FCC8 /* Info.plist */,
+			);
+			path = "touchtunes-ios-appTests";
+			sourceTree = "<group>";
+		};
+		67923F29267536060056FCC8 /* touchtunes-ios-appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				67923F2A267536060056FCC8 /* touchtunes_ios_appUITests.swift */,
+				67923F2C267536060056FCC8 /* Info.plist */,
+			);
+			path = "touchtunes-ios-appUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67923F04267536010056FCC8 /* touchtunes-ios-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67923F2F267536060056FCC8 /* Build configuration list for PBXNativeTarget "touchtunes-ios-app" */;
+			buildPhases = (
+				67923F01267536010056FCC8 /* Sources */,
+				67923F02267536010056FCC8 /* Frameworks */,
+				67923F03267536010056FCC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "touchtunes-ios-app";
+			productName = "touchtunes-ios-app";
+			productReference = 67923F05267536010056FCC8 /* touchtunes-ios-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67923F1A267536060056FCC8 /* touchtunes-ios-appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67923F32267536060056FCC8 /* Build configuration list for PBXNativeTarget "touchtunes-ios-appTests" */;
+			buildPhases = (
+				67923F17267536060056FCC8 /* Sources */,
+				67923F18267536060056FCC8 /* Frameworks */,
+				67923F19267536060056FCC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67923F1D267536060056FCC8 /* PBXTargetDependency */,
+			);
+			name = "touchtunes-ios-appTests";
+			productName = "touchtunes-ios-appTests";
+			productReference = 67923F1B267536060056FCC8 /* touchtunes-ios-appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		67923F25267536060056FCC8 /* touchtunes-ios-appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67923F35267536060056FCC8 /* Build configuration list for PBXNativeTarget "touchtunes-ios-appUITests" */;
+			buildPhases = (
+				67923F22267536060056FCC8 /* Sources */,
+				67923F23267536060056FCC8 /* Frameworks */,
+				67923F24267536060056FCC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67923F28267536060056FCC8 /* PBXTargetDependency */,
+			);
+			name = "touchtunes-ios-appUITests";
+			productName = "touchtunes-ios-appUITests";
+			productReference = 67923F26267536060056FCC8 /* touchtunes-ios-appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67923EFD267536010056FCC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					67923F04267536010056FCC8 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					67923F1A267536060056FCC8 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 67923F04267536010056FCC8;
+					};
+					67923F25267536060056FCC8 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 67923F04267536010056FCC8;
+					};
+				};
+			};
+			buildConfigurationList = 67923F00267536010056FCC8 /* Build configuration list for PBXProject "touchtunes-ios-app" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67923EFC267536010056FCC8;
+			productRefGroup = 67923F06267536010056FCC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67923F04267536010056FCC8 /* touchtunes-ios-app */,
+				67923F1A267536060056FCC8 /* touchtunes-ios-appTests */,
+				67923F25267536060056FCC8 /* touchtunes-ios-appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67923F03267536010056FCC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67923F15267536050056FCC8 /* LaunchScreen.storyboard in Resources */,
+				67923F12267536050056FCC8 /* Assets.xcassets in Resources */,
+				67923F10267536010056FCC8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67923F19267536060056FCC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67923F24267536060056FCC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67923F01267536010056FCC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67923F0D267536010056FCC8 /* ViewController.swift in Sources */,
+				67923F09267536010056FCC8 /* AppDelegate.swift in Sources */,
+				67923F0B267536010056FCC8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67923F17267536060056FCC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67923F20267536060056FCC8 /* touchtunes_ios_appTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67923F22267536060056FCC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67923F2B267536060056FCC8 /* touchtunes_ios_appUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67923F1D267536060056FCC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67923F04267536010056FCC8 /* touchtunes-ios-app */;
+			targetProxy = 67923F1C267536060056FCC8 /* PBXContainerItemProxy */;
+		};
+		67923F28267536060056FCC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67923F04267536010056FCC8 /* touchtunes-ios-app */;
+			targetProxy = 67923F27267536060056FCC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		67923F0E267536010056FCC8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67923F0F267536010056FCC8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		67923F13267536050056FCC8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67923F14267536050056FCC8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67923F2D267536060056FCC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67923F2E267536060056FCC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67923F30267536060056FCC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FQU58AQ88;
+				INFOPLIST_FILE = "touchtunes-ios-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.neymoura.touchtunes.touchtunes-ios-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67923F31267536060056FCC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FQU58AQ88;
+				INFOPLIST_FILE = "touchtunes-ios-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.neymoura.touchtunes.touchtunes-ios-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		67923F33267536060056FCC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FQU58AQ88;
+				INFOPLIST_FILE = "touchtunes-ios-appTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.neymoura.touchtunes.touchtunes-ios-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/touchtunes-ios-app.app/touchtunes-ios-app";
+			};
+			name = Debug;
+		};
+		67923F34267536060056FCC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FQU58AQ88;
+				INFOPLIST_FILE = "touchtunes-ios-appTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.neymoura.touchtunes.touchtunes-ios-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/touchtunes-ios-app.app/touchtunes-ios-app";
+			};
+			name = Release;
+		};
+		67923F36267536060056FCC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FQU58AQ88;
+				INFOPLIST_FILE = "touchtunes-ios-appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.neymoura.touchtunes.touchtunes-ios-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "touchtunes-ios-app";
+			};
+			name = Debug;
+		};
+		67923F37267536060056FCC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FQU58AQ88;
+				INFOPLIST_FILE = "touchtunes-ios-appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.neymoura.touchtunes.touchtunes-ios-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "touchtunes-ios-app";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67923F00267536010056FCC8 /* Build configuration list for PBXProject "touchtunes-ios-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67923F2D267536060056FCC8 /* Debug */,
+				67923F2E267536060056FCC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67923F2F267536060056FCC8 /* Build configuration list for PBXNativeTarget "touchtunes-ios-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67923F30267536060056FCC8 /* Debug */,
+				67923F31267536060056FCC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67923F32267536060056FCC8 /* Build configuration list for PBXNativeTarget "touchtunes-ios-appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67923F33267536060056FCC8 /* Debug */,
+				67923F34267536060056FCC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67923F35267536060056FCC8 /* Build configuration list for PBXNativeTarget "touchtunes-ios-appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67923F36267536060056FCC8 /* Debug */,
+				67923F37267536060056FCC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67923EFD267536010056FCC8 /* Project object */;
+}
