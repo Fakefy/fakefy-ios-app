@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TouchTunes_SDK
 
 class SearchViewController: UIViewController {
     override func viewDidLoad() {
