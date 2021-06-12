@@ -12,5 +12,13 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemRed
+        TouchTunesFactory.getSearchBusiness().search(term: "Queen", country: "US", media: "music", entity: "album", attribute: "artistTerm") { searchResult in
+            switch searchResult {
+            case .success(let searchData):
+                print(String(describing: searchData.first?.artistName))
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
