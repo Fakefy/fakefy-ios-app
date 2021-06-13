@@ -9,16 +9,132 @@ import UIKit
 import TouchTunes_SDK
 
 class SearchViewController: UIViewController {
+    
+    private var viewModel: SearchViewModelProtocol
+        
+    // MARK: - Layout Vars
+    private lazy var searchView: UISearchBar = {
+        let search = UISearchBar().useConstraint()
+        search.delegate = self
+        return search
+    }()
+    
+    private lazy var searchSeparator: UIView = {
+        let view = UIView().useConstraint()
+        view.backgroundColor = SGColors.grey
+        return view
+    }()
+    
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .grouped).useConstraint()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.backgroundColor = SGColors.clear
+        tableView.register(cell: SearchResultCell.self)
+        return tableView
+    }()
+    
+    // MARK: - Inits
+    required init?(coder: NSCoder) {
+        fatalError("Unavailable init")
+    }
+    
+    init(viewModel: SearchViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel.delegate = self
+    }
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemRed
-        TouchTunesFactory.getSearchBusiness().search(term: "Queen", country: "US", media: "music", entity: "album", attribute: "artistTerm") { searchResult in
-            switch searchResult {
-            case .success(let searchData):
-                print(String(describing: searchData.first?.artistName))
-            case .failure(let error):
-                print(error)
-            }
-        }
+        setupLayout()
+        tableView.reloadData()
+    }
+    
+    // MARK: - Setups
+    private func setupLayout() {
+        view.backgroundColor = SGColors.white
+        
+        view.addSubview(searchView)
+        view.addSubview(searchSeparator)
+        view.addSubview(tableView)
+                
+        searchView
+            .height(constant: SGSearch.searchViewHeight)
+            .top(anchor: view.safeAreaLayoutGuide.topAnchor)
+            .leading(anchor: view.safeAreaLayoutGuide.leadingAnchor)
+            .trailing(anchor: view.safeAreaLayoutGuide.trailingAnchor)
+        
+        searchSeparator
+            .height(constant: SGSearch.separatorHeight)
+            .top(anchor: searchView.bottomAnchor)
+            .leading(anchor: view.safeAreaLayoutGuide.leadingAnchor)
+            .trailing(anchor: view.safeAreaLayoutGuide.trailingAnchor)
+        
+        tableView
+            .top(anchor: searchSeparator.bottomAnchor)
+            .leading(anchor: view.safeAreaLayoutGuide.leadingAnchor)
+            .trailing(anchor: view.safeAreaLayoutGuide.trailingAnchor)
+            .bottom(anchor: view.bottomAnchor)
+    }
+}
+
+// MARK: - Triggers
+extension SearchViewController: SearchViewModelDelegate {
+    func onSearchUpdated() {
+        tableView.reloadData()
+    }
+}
+
+// MARK: - TableView
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.searchResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return nil
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return .zero
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return .zero
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: SearchResultCell.description(), for: indexPath) as? SearchResultCell
+        cell?.delegate = self
+        cell?.searchResult = viewModel.searchResults[indexPath.row]
+        return cell ?? UITableViewCell()
+    }
+}
+
+// MARK: - Search cell
+extension SearchViewController: SearchResultCellDelegate {
+    func didSelect(_ searchResult: SearchResultUI) {
+        let alert = UIAlertController(title: searchResult.name, message: searchResult.alertMessage, preferredStyle: .alert)
+        // TODO: Move to strings file
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in
+            alert.dismiss(animated: true)
+        })
+        present(alert, animated: true)
+    }
+}
+
+// MARK: - Search
+extension SearchViewController: UISearchBarDelegate, UITextFieldDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.search(for: searchText)
     }
 }
