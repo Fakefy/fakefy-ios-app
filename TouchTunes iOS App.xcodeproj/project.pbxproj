@@ -43,7 +43,6 @@
 
 /* Begin PBXFileReference section */
 		666E4DA56127713EC54D1DD3 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
-		673F02392681877000A90B2C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6770DFDB267565040016F827 /* TouchTunes_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TouchTunes_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6770DFE2267679E80016F827 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		6770DFE526767D290016F827 /* SearchResultUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultUI.swift; sourceTree = "<group>"; };
@@ -224,7 +223,6 @@
 		E8BE0A54B4A5FB2974007EF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				673F02392681877000A90B2C /* MapKit.framework */,
 				6770DFDB267565040016F827 /* TouchTunes_SDK.framework */,
 				730C64B24286EC2EC5D0D7D6 /* Pods_App.framework */,
 			);
