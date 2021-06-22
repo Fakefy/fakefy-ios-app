@@ -1,0 +1,35 @@
+PODS:
+  - Alamofire (5.4.3)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - TouchTunes-SDK (0.0.1):
+    - Moya (= 14.0.0)
+
+DEPENDENCIES:
+  - TouchTunes-SDK (from `https://github.com/neymoura/touchtunes-sdk`, branch `main`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Moya
+
+EXTERNAL SOURCES:
+  TouchTunes-SDK:
+    :branch: main
+    :git: https://github.com/neymoura/touchtunes-sdk
+
+CHECKOUT OPTIONS:
+  TouchTunes-SDK:
+    :commit: fdf2389474914c8a559b69fc1f0fa58732640c08
+    :git: https://github.com/neymoura/touchtunes-sdk
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  TouchTunes-SDK: 29d21ed6535774ff10b69e5c795f1f15db97c40f
+
+PODFILE CHECKSUM: fadd85925b17e577ce25cf506d5efdbc2455d218
+
+COCOAPODS: 1.10.1
