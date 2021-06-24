@@ -42,9 +42,8 @@ class SearchResultCell: UITableViewCell {
         return stack
     }()
     
-    // TODO: Add artwork image
-    private lazy var artworkView: UIView = {
-        let view = UIView().useConstraint()
+    private lazy var artworkView: UIImageView = {
+        let view = UIImageView().useConstraint()
         view.layer.cornerRadius = SGValues.Other.defaultRadius
         view.clipsToBounds = true
         view.backgroundColor = SGColors.grey
@@ -65,11 +64,6 @@ class SearchResultCell: UITableViewCell {
     }
 
     // MARK: - Setups
-    private func setupActions() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap) )
-        contentView.addGestureRecognizer(tapGesture)
-    }
-
     private func setupLayout() {
         selectionStyle = .none
         backgroundColor = SGColors.clear
@@ -91,16 +85,22 @@ class SearchResultCell: UITableViewCell {
             .bottom(anchor: contentView.bottomAnchor, constant: -SGValues.Vertical.single)
     }
     
+    private func setupActions() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap) )
+        contentView.addGestureRecognizer(tapGesture)
+    }
+    
     private func setupValues() {
         guard let searchResult = searchResult else { return }
         nameLabel.text = searchResult.name
         releaseLabel.text = searchResult.releaseDate
+        artworkView.load(imageUrl: searchResult.artwork)
     }
 }
 
 // MARK: - Actions
 extension SearchResultCell {
-    @objc func didTap() {
+    @objc private func didTap() {
         guard let searchResult = searchResult else { return }
         delegate?.didSelect(searchResult)
     }
