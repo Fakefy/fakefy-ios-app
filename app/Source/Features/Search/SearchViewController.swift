@@ -32,6 +32,7 @@ class SearchViewController: UIViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.backgroundColor = SGColors.clear
+        tableView.keyboardDismissMode = .onDrag
         tableView.register(cell: SearchResultCell.self)
         return tableView
     }()

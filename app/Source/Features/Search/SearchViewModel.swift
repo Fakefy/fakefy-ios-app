@@ -78,7 +78,6 @@ extension SearchViewModel {
 extension SearchViewModel {
     
     private func peformSearch(for term: String) {
-        print("Searching for", term)
         // Search parameters
         let country: String = NSLocale(localeIdentifier: Locale.current.identifier).countryCode ?? "US"
         
