@@ -54,9 +54,14 @@ class SearchViewController: UIViewController {
         tableView.reloadData()
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(traitCollection)
+        view.backgroundColor = SGColors.systemBackground
+    }
+    
     // MARK: - Setups
     private func setupLayout() {
-        view.backgroundColor = SGColors.white
+        view.backgroundColor = SGColors.systemBackground
         
         view.addSubview(searchView)
         view.addSubview(searchSeparator)

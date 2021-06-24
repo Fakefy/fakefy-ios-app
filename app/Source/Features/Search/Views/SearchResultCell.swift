@@ -21,16 +21,15 @@ class SearchResultCell: UITableViewCell {
     }
     
     // MARK: - Layout vars
-    
-    // TODO: Missing style guide
     private lazy var nameLabel: UILabel = {
         let label = UILabel().useConstraint()
+        label.textColor = SGColors.label
         return label
     }()
     
-    // TODO: Missing style guide
     private lazy var releaseLabel: UILabel = {
         let label = UILabel().useConstraint()
+        label.textColor = SGColors.secondarylabel
         return label
     }()
     
@@ -61,6 +60,12 @@ class SearchResultCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupLayout()
         setupActions()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        nameLabel.textColor = SGColors.label
+        releaseLabel.textColor = SGColors.secondarylabel
     }
 
     // MARK: - Setups
