@@ -24,10 +24,15 @@ protocol SearchViewModelProtocol {
 }
 
 class SearchViewModel: SearchViewModelProtocol {
+    
     weak var delegate: SearchViewModelDelegate?
     
     // MARK: Vars
-    private(set) var searchResults: [SearchResultUI] = []
+    private var searchTimer: Timer? = nil
+    
+    private(set) var searchResults: [SearchResultUI] = [] {
+        didSet { delegate?.onSearchUpdated() }
+    }
     
     // MARK: Business
     private let business: SearchBusinessProtocol
@@ -41,9 +46,39 @@ class SearchViewModel: SearchViewModelProtocol {
 // MARK: - Actions
 extension SearchViewModel {
     
-    // TODO: To avoid service overload and excessive network traffic, we should implement a Buffer quering a search after sometime when the user stopped typing
     func search(for term: String) {
-        
+        guard !term.isEmpty else {
+            searchResults = []
+            return
+        }
+        delayedSearch(for: term)
+    }
+}
+
+// MARK: - Timer
+extension SearchViewModel {
+    
+    private func delayedSearch(for term: String) {
+        searchTimer?.invalidate()
+        let searchContext = ["term": term]
+        searchTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(triggerSearch), userInfo: searchContext, repeats: false)
+        guard let searchTimer = searchTimer else { return }
+        RunLoop.current.add(searchTimer, forMode: .common)
+    }
+    
+    @objc private func triggerSearch(timer: Timer) {
+        guard let context = timer.userInfo as? [String:String],
+              let term = context["term"],
+              !term.isEmpty else { return }
+        peformSearch(for: term)
+    }
+}
+
+// MARK: - Network
+extension SearchViewModel {
+    
+    private func peformSearch(for term: String) {
+        print("Searching for", term)
         // Search parameters
         let country: String = NSLocale(localeIdentifier: Locale.current.identifier).countryCode ?? "US"
         
@@ -60,11 +95,9 @@ extension SearchViewModel {
             switch result {
             case .success(let results):
                 self?.searchResults = results.map { SearchResultUI(result: $0) }
-                self?.delegate?.onSearchUpdated()
                 
             case .failure:
                 self?.searchResults = []
-                self?.delegate?.onSearchUpdated()
             }
         }
     }
