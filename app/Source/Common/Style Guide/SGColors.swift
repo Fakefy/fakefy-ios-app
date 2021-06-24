@@ -9,7 +9,7 @@ import UIKit
 
 enum SGColors {
     static let label: UIColor = UIColor.label
-    static let secondarylabel: UIColor = UIColor.label
+    static let secondarylabel: UIColor = UIColor.secondaryLabel
     static let systemBackground: UIColor = UIColor.systemBackground
     
     static let white: UIColor = UIColor.white
