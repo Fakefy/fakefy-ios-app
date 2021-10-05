@@ -18,12 +18,6 @@ class SearchViewController: UIViewController {
         return search
     }()
     
-    private lazy var searchSeparator: UIView = {
-        let view = UIView().useConstraint()
-        view.backgroundColor = SGColors.grey
-        return view
-    }()
-    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped).useConstraint()
         tableView.delegate = self
@@ -65,7 +59,6 @@ class SearchViewController: UIViewController {
         view.backgroundColor = SGColors.systemBackground
         
         view.addSubview(searchView)
-        view.addSubview(searchSeparator)
         view.addSubview(tableView)
                 
         searchView
@@ -73,15 +66,9 @@ class SearchViewController: UIViewController {
             .top(anchor: view.safeAreaLayoutGuide.topAnchor)
             .leading(anchor: view.safeAreaLayoutGuide.leadingAnchor)
             .trailing(anchor: view.safeAreaLayoutGuide.trailingAnchor)
-        
-        searchSeparator
-            .height(constant: SGSearch.separatorHeight)
-            .top(anchor: searchView.bottomAnchor)
-            .leading(anchor: view.safeAreaLayoutGuide.leadingAnchor)
-            .trailing(anchor: view.safeAreaLayoutGuide.trailingAnchor)
-        
+                
         tableView
-            .top(anchor: searchSeparator.bottomAnchor)
+            .top(anchor: searchView.bottomAnchor)
             .leading(anchor: view.safeAreaLayoutGuide.leadingAnchor)
             .trailing(anchor: view.safeAreaLayoutGuide.trailingAnchor)
             .bottom(anchor: view.bottomAnchor)
