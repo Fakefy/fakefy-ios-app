@@ -8,7 +8,7 @@
 import TouchTunes_SDK
 
 class ViewModelFactory {
-    static func getSearchViewModel(business: SearchBusinessProtocol = TouchTunesFactory.getSearchBusiness()) -> SearchViewModelProtocol {
-        return SearchViewModel(business: business)
+    static func getSearchViewModel(business: SearchBusiness = TouchTunesFactory.getSearchBusiness()) -> SearchViewModel {
+        return SearchViewModelImpl(business: business)
     }
 }

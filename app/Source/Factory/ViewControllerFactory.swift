@@ -7,7 +7,7 @@
 
 class ViewControllerFactory {
     static func getSearchViewController(
-        viewModel: SearchViewModelProtocol = ViewModelFactory.getSearchViewModel()
+        viewModel: SearchViewModel = ViewModelFactory.getSearchViewModel()
     ) -> SearchViewController {
         return SearchViewController(viewModel: viewModel)
     }

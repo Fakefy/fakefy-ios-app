@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.4.3)
+  - Alamofire (5.4.4)
   - Kingfisher (6.3.0)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
@@ -25,15 +25,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TouchTunes-SDK:
-    :commit: fdf2389474914c8a559b69fc1f0fa58732640c08
+    :commit: b9fbfc0e46ae52ddebd5f3140cc1740f0a5829b1
     :git: https://github.com/neymoura/touchtunes-sdk
 
 SPEC CHECKSUMS:
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   TouchTunes-SDK: 29d21ed6535774ff10b69e5c795f1f15db97c40f
 
 PODFILE CHECKSUM: d56d109932e0479f51196151a9c2ba9743dc996a
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

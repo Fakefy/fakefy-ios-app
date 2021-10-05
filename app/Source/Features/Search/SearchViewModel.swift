@@ -14,7 +14,7 @@ protocol SearchViewModelDelegate: AnyObject {
     func onSearchUpdated()
 }
 
-protocol SearchViewModelProtocol {
+protocol SearchViewModel {
     // Vars
     var delegate: SearchViewModelDelegate? { get set }
     var searchResults: [SearchResultUI] { get }
@@ -23,7 +23,7 @@ protocol SearchViewModelProtocol {
     func search(for term: String)
 }
 
-class SearchViewModel: SearchViewModelProtocol {
+class SearchViewModelImpl: SearchViewModel {
     
     weak var delegate: SearchViewModelDelegate?
     
@@ -35,16 +35,16 @@ class SearchViewModel: SearchViewModelProtocol {
     }
     
     // MARK: Business
-    private let business: SearchBusinessProtocol
+    private let business: SearchBusiness
     
     // MARK: - Init
-    init(business: SearchBusinessProtocol) {
+    init(business: SearchBusiness) {
         self.business = business
     }
 }
 
 // MARK: - Actions
-extension SearchViewModel {
+extension SearchViewModelImpl {
     
     func search(for term: String) {
         guard !term.isEmpty else {
@@ -56,7 +56,7 @@ extension SearchViewModel {
 }
 
 // MARK: - Timer
-extension SearchViewModel {
+extension SearchViewModelImpl {
     
     private func delayedSearch(for term: String) {
         searchTimer?.invalidate()
@@ -75,7 +75,7 @@ extension SearchViewModel {
 }
 
 // MARK: - Network
-extension SearchViewModel {
+extension SearchViewModelImpl {
     
     private func peformSearch(for term: String) {
         // Search parameters

@@ -9,7 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
-    private var viewModel: SearchViewModelProtocol
+    private var viewModel: SearchViewModel
         
     // MARK: - Layout Vars
     private lazy var searchView: UISearchBar = {
@@ -42,7 +42,7 @@ class SearchViewController: UIViewController {
         fatalError("Unavailable init")
     }
     
-    init(viewModel: SearchViewModelProtocol) {
+    init(viewModel: SearchViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         self.viewModel.delegate = self
