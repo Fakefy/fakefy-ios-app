@@ -1,0 +1,10 @@
+..platform :ios, '14.5'
+
+target 'App' do
+  use_frameworks!
+
+  pod 'Kingfisher', '6.3.0'
+  pod 'TouchTunes-Data', :git => "https://github.com/neymoura/touchtunes-data", :tag => '0.0.1'
+  pod 'TouchTunes-Domain', :git => "https://github.com/neymoura/touchtunes-domain", :tag => '0.0.5'
+
+end
