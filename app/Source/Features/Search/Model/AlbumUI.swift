@@ -1,14 +1,14 @@
 //
-//  SearchResultUI.swift
+//  AlbumUI.swift
 //  App
 //
 //  Created by Ney Moura on 13/06/21.
 //
 
 import Foundation
-import TouchTunes_SDK
+import FakefyDomain
 
-class SearchResultUI {
+class AlbumUI {
     let artwork: String?
     let name: String
     let releaseDate: String
@@ -17,7 +17,7 @@ class SearchResultUI {
     let copyright: String
     let alertMessage: String
     
-    init(result: SearchResult) {
+    init(result: Album) {
         self.artwork = result.artworkUrl100 ?? result.artworkUrl100
         self.name = result.collectionName
         self.releaseDate = result.releaseDate?.formatDate() ?? " No release date " // Move to strings file

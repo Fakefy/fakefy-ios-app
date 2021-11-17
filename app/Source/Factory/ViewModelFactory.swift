@@ -5,10 +5,13 @@
 //  Created by Ney Moura on 13/06/21.
 //
 
-import TouchTunes_SDK
+import FakefyDomain
+import FakefyData
 
 class ViewModelFactory {
-    static func getSearchViewModel(business: SearchBusiness = TouchTunesFactory.getSearchBusiness()) -> SearchViewModel {
-        return SearchViewModelImpl(business: business)
+    static func getSearchViewModel() -> SearchViewModel {
+        let repository = RepositoryFactory.makeSearchRepository()
+        let useCase = UseCaseFactory.makeSearchUseCase(searchRepository: repository)
+        return SearchViewModelImpl(useCase: useCase)
     }
 }

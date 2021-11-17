@@ -114,7 +114,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 
 // MARK: - Search cell
 extension SearchViewController: SearchResultCellDelegate {
-    func didSelect(_ searchResult: SearchResultUI) {
+    func didSelect(_ searchResult: AlbumUI) {
         let alert = UIAlertController(title: searchResult.name, message: searchResult.alertMessage, preferredStyle: .alert)
         // TODO: Move to strings file
         alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in

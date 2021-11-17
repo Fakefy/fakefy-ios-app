@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import TouchTunes_SDK
+import FakefyDomain
 
 // TODO: Implement Unit tests
 
@@ -17,7 +17,7 @@ protocol SearchViewModelDelegate: AnyObject {
 protocol SearchViewModel {
     // Vars
     var delegate: SearchViewModelDelegate? { get set }
-    var searchResults: [SearchResultUI] { get }
+    var searchResults: [AlbumUI] { get }
     
     // Actions
     func search(for term: String)
@@ -25,21 +25,24 @@ protocol SearchViewModel {
 
 class SearchViewModelImpl: SearchViewModel {
     
+    private let searchContextTermKey: String = "term"
+    private let defaultCountry: String = "US"
+    
     weak var delegate: SearchViewModelDelegate?
     
     // MARK: Vars
     private var searchTimer: Timer? = nil
     
-    private(set) var searchResults: [SearchResultUI] = [] {
+    private(set) var searchResults: [AlbumUI] = [] {
         didSet { delegate?.onSearchUpdated() }
     }
     
     // MARK: Business
-    private let business: SearchBusiness
+    private let useCase: SearchAlbumUseCase
     
     // MARK: - Init
-    init(business: SearchBusiness) {
-        self.business = business
+    init(useCase: SearchAlbumUseCase) {
+        self.useCase = useCase
     }
 }
 
@@ -60,7 +63,7 @@ extension SearchViewModelImpl {
     
     private func delayedSearch(for term: String) {
         searchTimer?.invalidate()
-        let searchContext = ["term": term]
+        let searchContext = [searchContextTermKey: term]
         searchTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(triggerSearch), userInfo: searchContext, repeats: false)
         guard let searchTimer = searchTimer else { return }
         RunLoop.current.add(searchTimer, forMode: .common)
@@ -68,7 +71,7 @@ extension SearchViewModelImpl {
     
     @objc private func triggerSearch(timer: Timer) {
         guard let context = timer.userInfo as? [String:String],
-              let term = context["term"],
+              let term = context[searchContextTermKey],
               !term.isEmpty else { return }
         peformSearch(for: term)
     }
@@ -78,22 +81,12 @@ extension SearchViewModelImpl {
 extension SearchViewModelImpl {
     
     private func peformSearch(for term: String) {
-        // Search parameters
-        let country: String = NSLocale(localeIdentifier: Locale.current.identifier).countryCode ?? "US"
+        let country: String = NSLocale(localeIdentifier: Locale.current.identifier).countryCode ?? defaultCountry
         
-        // TODO: Tune parameters for albums only
-        let media = "music"
-        let entity = "album"
-        let attribute = "artistTerm"
-        
-        business.search(term: term,
-                        country: country,
-                        media: media,
-                        entity: entity,
-                        attribute: attribute) { [weak self] result in
+        useCase.searchAlbum(with: term, country: country) { [weak self] result in
             switch result {
             case .success(let results):
-                self?.searchResults = results.map { SearchResultUI(result: $0) }
+                self?.searchResults = results.map { AlbumUI(result: $0) }
                 
             case .failure:
                 self?.searchResults = []

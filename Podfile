@@ -4,6 +4,7 @@ target 'App' do
   use_frameworks!
 
   pod 'Kingfisher', '6.3.0'
-  pod 'TouchTunes-SDK', :git => "https://github.com/neymoura/touchtunes-sdk", :branch => 'main'
+  pod 'FakefyData', '0.0.3'
+  pod 'FakefyDomain', '0.0.3'
 
 end

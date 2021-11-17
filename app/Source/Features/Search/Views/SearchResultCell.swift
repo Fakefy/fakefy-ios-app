@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SearchResultCellDelegate: AnyObject {
-    func didSelect(_ result: SearchResultUI)
+    func didSelect(_ result: AlbumUI)
 }
 
 class SearchResultCell: UITableViewCell {
@@ -16,7 +16,7 @@ class SearchResultCell: UITableViewCell {
     // MARK: - Vars
     weak var delegate: SearchResultCellDelegate?
     
-    var searchResult: SearchResultUI? {
+    var searchResult: AlbumUI? {
         didSet { setupValues() }
     }
     
