@@ -1,0 +1,27 @@
+{
+    "resultCount": 1,
+    "results": [
+        {
+            "wrapperType": "collection",
+            "collectionType": "Album",
+            "artistId": 3296287,
+            "collectionId": 1440650428,
+            "amgArtistId": 5205,
+            "artistName": "Queen",
+            "collectionName": "The Platinum Collection (Greatest Hits I, II & III)",
+            "collectionCensoredName": "The Platinum Collection (Greatest Hits I, II & III)",
+            "artistViewUrl": "https://music.apple.com/us/artist/queen/3296287?uo=4",
+            "collectionViewUrl": "https://music.apple.com/us/album/the-platinum-collection-greatest-hits-i-ii-iii/1440650428?uo=4",
+            "artworkUrl60": "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/83/23/e4/8323e48b-3467-448b-1ce0-8981d8a97437/source/60x60bb.jpg",
+            "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/83/23/e4/8323e48b-3467-448b-1ce0-8981d8a97437/source/100x100bb.jpg",
+            "collectionPrice": 24.99,
+            "collectionExplicitness": "notExplicit",
+            "trackCount": 51,
+            "copyright": "℗ 2014 Hollywood Records, Inc.",
+            "country": "USA",
+            "currency": "USD",
+            "releaseDate": "2014-01-01T08:00:00Z",
+            "primaryGenreName": "Rock"
+        }
+    ]
+}
