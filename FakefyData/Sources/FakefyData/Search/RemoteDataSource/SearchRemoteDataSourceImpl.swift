@@ -6,6 +6,7 @@
 //
 
 import Moya
+import Foundation
 import FakefyDomain
 
 class SearchRemoteDataSourceImpl {
