@@ -23,12 +23,16 @@ class SearchResultCell: UITableViewCell {
     // MARK: - Layout vars
     private lazy var nameLabel: UILabel = {
         let label = UILabel().useConstraint()
+        label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.adjustsFontForContentSizeCategory = true
         label.textColor = SGColors.label
         return label
     }()
     
     private lazy var releaseLabel: UILabel = {
         let label = UILabel().useConstraint()
+        label.font = UIFont.preferredFont(forTextStyle: .headline)
+        label.adjustsFontForContentSizeCategory = true
         label.textColor = SGColors.secondarylabel
         return label
     }()
