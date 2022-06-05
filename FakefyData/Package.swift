@@ -22,11 +22,11 @@ let package = Package(
         .target(
             name: "FakefyData",
             dependencies: ["FakefyDomain", "Moya"],
-            resources: [.copy("Database")]
+            resources: [.process("Database")]
         ),
         .testTarget(
             name: "FakefyDataTests",
             dependencies: ["FakefyData", "FakefyDomain", "Quick", "Nimble"],
-            resources: [.copy("Mock/Files")])
+            resources: [.process("Mock/Files")])
     ]
 )

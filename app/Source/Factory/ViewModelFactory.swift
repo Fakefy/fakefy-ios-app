@@ -9,7 +9,7 @@ import FakefyDomain
 import FakefyData
 
 class ViewModelFactory {
-    static func getSearchViewModel() -> SearchViewModel {
+    static func makeSearchViewModel() -> SearchViewModel {
         let repository = RepositoryFactory.makeSearchRepository()
         let useCase = UseCaseFactory.makeSearchUseCase(searchRepository: repository)
         return SearchViewModelImpl(useCase: useCase)

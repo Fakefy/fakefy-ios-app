@@ -16,9 +16,9 @@ class TestCoreDataStack {
     init() {
         
         guard
-            let dataModel = Bundle(for: type(of: self)).url(forResource: dataModelName, withExtension: "momd"),
+            let dataModel = Bundle.module.url(forResource: dataModelName, withExtension: "momd"),
             let objectModel = NSManagedObjectModel(contentsOf: dataModel) else {
-            fatalError("Error initializing TestCoreDataStack")
+            fatalError("Error initializing TestCoreDataStack, have you copied the DataModel file from the main target?")
         }
 
         self.container = NSPersistentContainer(name: dataModelName, managedObjectModel: objectModel)

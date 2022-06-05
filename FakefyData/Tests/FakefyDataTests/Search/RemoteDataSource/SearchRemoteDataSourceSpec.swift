@@ -5,6 +5,7 @@
 //  Created by Ney Moura on 10/06/21.
 //
 
+import Foundation
 import Nimble
 import Quick
 import Moya

@@ -6,8 +6,8 @@
 //
 
 class ViewControllerFactory {
-    static func getSearchViewController(
-        viewModel: SearchViewModel = ViewModelFactory.getSearchViewModel()
+    static func makeSearchViewController(
+        viewModel: SearchViewModel = ViewModelFactory.makeSearchViewModel()
     ) -> SearchViewController {
         return SearchViewController(viewModel: viewModel)
     }

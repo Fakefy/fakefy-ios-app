@@ -20,6 +20,6 @@ let package = Package(
         .testTarget(
             name: "FakefyDomainTests",
             dependencies: ["FakefyDomain", "Quick", "Nimble"],
-            resources: [.copy("Mock/Files")]),
+            resources: [.process("Mock/Files")]),
     ]
 )
