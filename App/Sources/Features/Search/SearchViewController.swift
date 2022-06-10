@@ -40,6 +40,7 @@ class SearchViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         self.viewModel.delegate = self
+        view.accessibilityIdentifier = "searchViewController"
     }
     
     // MARK: - Lifecycle
