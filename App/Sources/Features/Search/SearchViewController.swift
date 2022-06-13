@@ -15,6 +15,8 @@ class SearchViewController: UIViewController {
     private lazy var searchView: UISearchBar = {
         let search = UISearchBar().useConstraint()
         search.delegate = self
+        search.accessibilityIdentifier = "searchView"
+        search.accessibilityTraits = UIAccessibilityTraits.searchField
         return search
     }()
     
@@ -28,6 +30,7 @@ class SearchViewController: UIViewController {
         tableView.backgroundColor = SGColors.clear
         tableView.keyboardDismissMode = .onDrag
         tableView.register(cell: SearchResultCell.self)
+        tableView.accessibilityIdentifier = "tableView"
         return tableView
     }()
     
