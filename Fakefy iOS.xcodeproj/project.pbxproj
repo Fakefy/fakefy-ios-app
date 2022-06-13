@@ -33,6 +33,10 @@
 		A38B156D2853E541002D0150 /* SearchViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B156C2853E541002D0150 /* SearchViewControllerUITests.swift */; };
 		A38B156F2853ED29002D0150 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = A38B156E2853ED29002D0150 /* Nimble */; };
 		A38B15712853ED29002D0150 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = A38B15702853ED29002D0150 /* Quick */; };
+		A38B157428579C07002D0150 /* CoverInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B157328579C07002D0150 /* CoverInspectorViewController.swift */; };
+		A38B157628579C20002D0150 /* CoverInspectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B157528579C20002D0150 /* CoverInspectorViewModel.swift */; };
+		A38B157928579C38002D0150 /* CoverUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B157828579C38002D0150 /* CoverUI.swift */; };
+		A38B157B2857BCFB002D0150 /* UIImageView+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B157A2857BCFB002D0150 /* UIImageView+Effects.swift */; };
 		A3C596A1283BD37F00C2F875 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A3C596A0283BD37F00C2F875 /* Kingfisher */; };
 		A3C596A3283BD38800C2F875 /* FakefyDomain in Frameworks */ = {isa = PBXBuildFile; productRef = A3C596A2283BD38800C2F875 /* FakefyDomain */; };
 		A3C596A5283BD3C300C2F875 /* FakefyData in Frameworks */ = {isa = PBXBuildFile; productRef = A3C596A4283BD3C300C2F875 /* FakefyData */; };
@@ -94,6 +98,10 @@
 		A37C9C07284E1A62003CED0D /* AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A37C9C09284E1A62003CED0D /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		A38B156C2853E541002D0150 /* SearchViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerUITests.swift; sourceTree = "<group>"; };
+		A38B157328579C07002D0150 /* CoverInspectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverInspectorViewController.swift; sourceTree = "<group>"; };
+		A38B157528579C20002D0150 /* CoverInspectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverInspectorViewModel.swift; sourceTree = "<group>"; };
+		A38B157828579C38002D0150 /* CoverUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverUI.swift; sourceTree = "<group>"; };
+		A38B157A2857BCFB002D0150 /* UIImageView+Effects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Effects.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +163,7 @@
 				6770DFF4267697460016F827 /* UIView+Constraints.swift */,
 				6770E0042676AB360016F827 /* UITableView+Register.swift */,
 				67EEA7622684B4A000AE3371 /* UIImageView+Kingfisher.swift */,
+				A38B157A2857BCFB002D0150 /* UIImageView+Effects.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -261,6 +270,7 @@
 		67923F3C267538B60056FCC8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A38B157228579BAB002D0150 /* Cover Inspector */,
 				67923F3B267538A60056FCC8 /* Search */,
 			);
 			path = Features;
@@ -320,6 +330,24 @@
 				A38B156C2853E541002D0150 /* SearchViewControllerUITests.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		A38B157228579BAB002D0150 /* Cover Inspector */ = {
+			isa = PBXGroup;
+			children = (
+				A38B157728579C24002D0150 /* Model */,
+				A38B157328579C07002D0150 /* CoverInspectorViewController.swift */,
+				A38B157528579C20002D0150 /* CoverInspectorViewModel.swift */,
+			);
+			path = "Cover Inspector";
+			sourceTree = "<group>";
+		};
+		A38B157728579C24002D0150 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A38B157828579C38002D0150 /* CoverUI.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A3970CB3283816D30020845A /* Packages */ = {
@@ -489,9 +517,12 @@
 				67923F0D267536010056FCC8 /* SearchViewController.swift in Sources */,
 				6770DFFA26769A000016F827 /* SGSearch.swift in Sources */,
 				67EEA7662684F17300AE3371 /* KeyboardManager.swift in Sources */,
+				A38B157628579C20002D0150 /* CoverInspectorViewModel.swift in Sources */,
+				A38B157928579C38002D0150 /* CoverUI.swift in Sources */,
 				67923F09267536010056FCC8 /* AppDelegate.swift in Sources */,
 				6770DFE3267679E80016F827 /* SearchViewModel.swift in Sources */,
 				6770E00026769F5E0016F827 /* SGColors.swift in Sources */,
+				A38B157B2857BCFB002D0150 /* UIImageView+Effects.swift in Sources */,
 				6770DFF3267693CD0016F827 /* ViewControllerFactory.swift in Sources */,
 				6770DFF82676983F0016F827 /* SGValues.swift in Sources */,
 				67EEA7632684B4A000AE3371 /* UIImageView+Kingfisher.swift in Sources */,
@@ -501,6 +532,7 @@
 				6770DFF126768D280016F827 /* ViewModelFactory.swift in Sources */,
 				6770DFF5267697460016F827 /* UIView+Constraints.swift in Sources */,
 				6770DFEC267688B80016F827 /* String+Formatter.swift in Sources */,
+				A38B157428579C07002D0150 /* CoverInspectorViewController.swift in Sources */,
 				6770DFEA267688800016F827 /* Double+Formatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

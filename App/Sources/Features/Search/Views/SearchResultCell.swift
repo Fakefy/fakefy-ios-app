@@ -9,6 +9,7 @@ import UIKit
 
 protocol SearchResultCellDelegate: AnyObject {
     func didSelect(_ result: AlbumUI)
+    func didSelectArtwork(_ result: AlbumUI)
 }
 
 class SearchResultCell: UITableViewCell {
@@ -95,8 +96,12 @@ class SearchResultCell: UITableViewCell {
     }
     
     private func setupActions() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap) )
-        contentView.addGestureRecognizer(tapGesture)
+        let cellTapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapCell))
+        contentView.addGestureRecognizer(cellTapGesture)
+        
+        let artworkTapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapArtwork))
+        artworkView.addGestureRecognizer(artworkTapGesture)
+        artworkView.isUserInteractionEnabled = true
     }
     
     private func setupValues() {
@@ -109,8 +114,13 @@ class SearchResultCell: UITableViewCell {
 
 // MARK: - Actions
 extension SearchResultCell {
-    @objc private func didTap() {
+    @objc private func didTapCell() {
         guard let searchResult = searchResult else { return }
         delegate?.didSelect(searchResult)
+    }
+    
+    @objc private func didTapArtwork() {
+        guard let searchResult = searchResult else { return }
+        delegate?.didSelectArtwork(searchResult)
     }
 }

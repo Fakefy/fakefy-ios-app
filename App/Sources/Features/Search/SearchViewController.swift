@@ -126,6 +126,12 @@ extension SearchViewController: SearchResultCellDelegate {
         })
         present(alert, animated: true)
     }
+    
+    func didSelectArtwork(_ result: AlbumUI) {
+        let viewModel = CoverInspectorViewModelImpl(cover: CoverUI(albumUI: result))
+        let controller = CoverInspectorViewController(viewModel: viewModel)
+        present(controller, animated: true)
+    }
 }
 
 // MARK: - Search
